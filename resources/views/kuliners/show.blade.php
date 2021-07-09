@@ -13,7 +13,7 @@
                         <p class="is-size-3 has-text-weight-bold">{{ $kuliner->nama }}</p>
                         <p class="is-size-5">{{ $kuliner->alamat }}</p>
                         <div class="content">
-                            <p class="has-text-grey">{{ $kuliner->deskripsi }}</p>
+                            <p class="has-text-grey">{!! $kuliner->deskripsi !!}</p>
                         </div>
                         <div>
                             <p class="is-size-5">Link Order</p>

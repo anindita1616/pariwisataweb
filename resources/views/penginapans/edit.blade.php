@@ -90,5 +90,15 @@
             </div>
         </div>
     </div>
+    @section('ckeditor')
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#deskripsi' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+    @endsection
     @extends('front.footer')
 </x-app-layout>

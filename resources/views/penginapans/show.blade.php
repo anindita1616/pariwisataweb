@@ -14,7 +14,7 @@
                         <p class="is-size-3 has-text-weight-bold">{{ $penginapan->nama }}</p>
                         <p class="is-size-5">{{ $penginapan->alamat }}</p>
                         <div class="content">
-                            <p class="has-text-grey">{{ $penginapan->deskripsi }}</p>
+                            <p class="has-text-grey">{!! $penginapan->deskripsi !!}</p>
                         </div>
                         {{-- <div>
                             <p class="is-size-5">Akomodasi</p>

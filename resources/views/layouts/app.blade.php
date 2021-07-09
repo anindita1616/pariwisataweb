@@ -57,6 +57,7 @@
     </div>
 
     @stack('modals')
+    @yield('ckeditor')
 
     @livewireScripts
 </body>
