@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WisataApiController;
+use App\Http\Controllers\PenginapanApiController;
+use App\Http\Controllers\KulinerApiController;
+use App\Http\Controllers\EventApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+Route::apiResource('wisatas', WisataApiController::class);
+Route::apiResource('penginapans', PenginapanApiController::class);
+Route::apiResource('kuliners', KulinerApiController::class);
+Route::apiResource('events', EventApiController::class);
