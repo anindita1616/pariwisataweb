@@ -1,0 +1,478 @@
+/*Setting Font*/
+
+@font-face {
+    font-family: Signika-r;
+    src: url('/font/Signika-Regular.ttf');
+}
+
+@font-face {
+    font-family: Signika-m;
+    src: url('/font/Signika-Medium.ttf');
+}
+
+@font-face {
+    font-family: Signika-b;
+    src: url('/font/Signika-Bold.ttf');
+}
+
+
+/**{
+	font-family: Quicksand-r, BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+	font-weight: normal;
+}*/
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: Signika-r, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100% !important;
+    height: 100% !important;
+    scroll-behavior: smooth;
+}
+
+#dispar-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    width: 100%;
+    flex-grow: 2;
+}
+
+
+/*CUSTOM*/
+
+.has-text-weight-semibold,
+.title {
+    font-family: Signika-m !important;
+    font-weight: normal !important;
+}
+
+.has-text-weight-bold {
+    font-family: Signika-b !important;
+    font-weight: normal !important;
+}
+
+.has-spaced-between {
+    justify-content: space-between;
+}
+
+.slick-dots li button::before {
+    font-size: 15px !important;
+    top: -40px !important;
+    color: #fff !important;
+    z-index: 999 !important;
+}
+
+.slick-dots li.slick-active button::before {
+    opacity: .75;
+    color: #fff !important;
+}
+
+
+/*-------*/
+
+nav {
+    margin-top: 1rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+nav .navbar-item img {
+    max-height: none;
+    height: 65px !important;
+}
+
+#dispar-header {
+    border-radius: 20px;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+
+#dispar-header figure#wrap-header {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+}
+
+#dispar-header figure#wrap-header::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+#dispar-header figure#wrap-header img,
+#dispar-header figure#wrap-header iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+#dispar-header figure#wrap-header figcaption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+#dispar-header figure#wrap-header figcaption .item-header {
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    position: relative;
+}
+
+#dispar-header .widget-header {
+    width: 100%;
+    left: 0;
+    bottom: -30px;
+    position: absolute;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+}
+
+#dispar-header .widget-header .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.05);
+    background: #fff !important;
+    transition: all 0.3s ease;
+}
+
+#dispar-header .widget-header .column:hover {
+    background-color: #ebebeb !important;
+}
+
+#dispar-header .widget-header .column:nth-of-type(1) {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-left: 1px solid lightgrey;
+}
+
+#dispar-header .widget-header .column:nth-of-type(4) {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-right: 1px solid lightgrey;
+}
+
+#dispar-header figure#wrap-header figcaption div.field>* {
+    font-size: 0.5rem !important;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 500px;
+}
+
+#dispar-kuliner .item-kuliner,
+#dispar-wisata .item-wisata,
+#dispar-penginapan .item-penginapan,
+#dispar-artikel .item-artikel {
+    position: relative;
+    transition: all 0.3s ease;
+    top: 0;
+}
+
+#dispar-kuliner .item-kuliner:hover,
+#dispar-wisata .item-wisata:hover,
+#dispar-penginapan .item-penginapan:hover,
+#dispar-artikel .item-artikel:hover {
+    top: -5px;
+}
+
+#dispar-event .item-event img,
+#dispar-kuliner .item-kuliner img,
+#dispar-wisata .item-wisata img,
+#dispar-penginapan .item-penginapan img {
+    border-radius: 8px;
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#dispar-event .item-event:hover img {
+    transform: scale(1.1);
+}
+
+#dispar-event .item-event:hover figure {
+    top: -5px;
+    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.24);
+}
+
+#dispar-event .item-event img {
+    height: 100% !important;
+    transition: all 0.3s ease;
+}
+
+#dispar-event .item-event figure {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    top: 0;
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+}
+
+#dispar-event .item-event figure::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    z-index: 0;
+    border-radius: 8px;
+}
+
+#dispar-event .item-event figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 16px 10px;
+    color: #fff;
+    z-index: 1;
+}
+
+#dispar-category .item-category>div {
+    border-radius: 5px;
+}
+
+#dispar-artikel figure img {
+    border-radius: 8px;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wisata-slide img,
+.kuliner-slide img,
+.penginapan-slide img,
+.event-slide img {
+    height: 300px !important;
+    filter: grayscale(1);
+    object-fit: cover;
+    width: 100%;
+}
+
+.wisata-slide::after,
+.kuliner-slide::after,
+.penginapan-slide::after,
+.event-slide::after {
+    content: 'Wisata Balikpapan';
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(50, 115, 220, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: Signika-b;
+}
+
+.kuliner-slide::after {
+    content: 'Kuliner Balikpapan' !important;
+}
+
+.penginapan-slide::after {
+    content: 'Penginapan Balikpapan' !important;
+}
+
+.event-slide::after {
+    content: 'Event Balikpapan' !important;
+}
+
+#dispar-login {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+}
+
+#dispar-login img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+#dispar-login .columns {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#dispar-login .column {
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dispar-login .column .card {
+    width: 100%;
+}
+
+#dispar-login .card-header {
+    box-shadow: none;
+    /*border-bottom: 1px solid lightgrey;*/
+}
+
+#dispar-artikel-detail img {
+    border-radius: 5px;
+}
+
+#dispar-artikel-detail .content {
+    line-height: 2;
+}
+
+#dispar-all-detail img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+#dispar-all-detail .content p {
+    line-height: 1.6;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.item-detail-akomodasi {
+    border-radius: 10px;
+}
+
+.all-detail-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.ulasan-wrap img {
+    border-radius: 100px !important;
+}
+
+.rtfoot {
+    height: 75px;
+}
+
+
+/* .ulasan-wrap img{
+	width: 35px;
+	height: 35px;
+	object-fit: cover;
+	border-radius: 100px!important;
+} */
+
+@media screen and (max-width: 768px) {
+    #dispar-header {
+        height: 60vh;
+        padding: 15px 15px;
+    }
+    .judul {
+        margin-top: 35px;
+    }
+    .jdl {
+        font-size: 32px !important;
+    }
+    .subjdl {
+        font-size: 20px !important;
+    }
+    .fcari {
+        width: 150px;
+    }
+    .container-event {
+        padding: 15px 15px;
+    }
+    .rtfoot {
+        height: 45px;
+    }
+    .titfoot {
+        font-size: 26px !important;
+    }
+    .subtitfoot {
+        font-size: 18px !important;
+    }
+    .breadcrumb {
+        margin-left: 15px;
+    }
+    .inpt {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+    .finput {
+        width: 100% !important;
+        border-bottom-right-radius: 290486px !important;
+        border-top-right-radius: 290486px !important;
+    }
+    .btnn {
+        border-bottom-right-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+    .field.has-addons {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        flex-direction: row;
+    }
+    .wisata-slide::after,
+    .kuliner-slide::after,
+    .penginapan-slide::after,
+    .event-slide::after {
+        font-size: 2rem;
+    }
+}
