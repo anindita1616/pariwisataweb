@@ -178,6 +178,8 @@
                             <figcaption>
                                 <p class="has-text-weight-semibold has-text-grey-dark is-size-5">
                                     {{ $wisata->nama }}</p>
+                                <p class="has-text-grey ">
+                                    {{ $wisata->harga }}</p>
                                 <div class="mb-2">
                                     {{-- <span class="icon is-small has-text-warning">
                                         <i class="fas fa-star checked"></i>

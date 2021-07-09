@@ -30,6 +30,7 @@ class WisataController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'link' => 'required',
+            'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
         ]);
@@ -48,6 +49,7 @@ class WisataController extends Controller
             'nama' => request('nama'),
             'alamat' => request('alamat'),
             'link' => request('link'),
+            'harga' => request('harga'),
             'gambar' => $image_name,
             'slug' => Str::slug($request->nama, '-'),
             'deskripsi' => request('deskripsi'),
@@ -76,6 +78,7 @@ class WisataController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'link' => 'required',
+            'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
         ]);
@@ -94,6 +97,7 @@ class WisataController extends Controller
             'nama' => request('nama'),
             'alamat' => request('alamat'),
             'link' => request('link'),
+            'harga' => request('harga'),
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
         ]);

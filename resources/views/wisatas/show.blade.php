@@ -15,7 +15,23 @@
                         <div class="content">
                             <p class="has-text-grey">{{ $wisata->deskripsi }}</p>
                         </div>
+
                         <div>
+                            <p class="is-size-5">Harga</p>
+                            <br>
+                            <div class="columns">
+                                <div class="column is-2">
+                                    <div
+                                        class="item-detail-akomodasi has-background-link has-text-light has-text-centered py-3">
+                                        <a href="#" target="_blank" class="icon is-medium has-text-light">
+                                                <i class="fas fa-money-bill fa-1x"></i>
+                                        </a>
+                                        <p>{{$wisata->harga}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
                             <p class="is-size-5">Akomodasi</p>
                             <br>
                             <div class="columns">

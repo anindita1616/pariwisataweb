@@ -28,6 +28,10 @@
                                         class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Link Lokasi
                                     </th>
+                                    {{-- <th scope="col"
+                                    class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase break-all tracking-wider">
+                                    Harga
+                                    </th> --}}
                                     <th scope="col"
                                         class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase break-all tracking-wider">
                                         Deskripsi
@@ -65,6 +69,9 @@
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen></iframe>
                                         </td>
+                                        {{-- <td class="px-6 py-4 is-wrapped text-md text-gray-500">
+                                            {{ Str::of($wisata->harga)->words(30) }}
+                                        </td> --}}
                                         <td class="px-6 py-4 is-wrapped text-md text-gray-500">
                                             {{ Str::of($wisata->deskripsi)->words(30) }}
                                         </td>
