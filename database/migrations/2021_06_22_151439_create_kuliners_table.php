@@ -19,6 +19,7 @@ class CreateKulinersTable extends Migration
             $table->string('alamat');
             $table->string('gambar')->nullable();
             $table->text('link');
+            $table->text('link_order');
             $table->text('deskripsi');
             $table->string('slug');
             $table->timestamps();
