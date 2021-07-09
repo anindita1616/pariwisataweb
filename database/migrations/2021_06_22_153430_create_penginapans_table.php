@@ -20,6 +20,8 @@ class CreatePenginapansTable extends Migration
             $table->string('gambar')->nullable();
             $table->string('slug');
             $table->text('link');
+            $table->text('link_order');
+            $table->string('harga');
             $table->text('deskripsi');
             $table->timestamps();
             $table->softDeletes();
