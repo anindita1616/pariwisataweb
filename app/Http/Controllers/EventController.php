@@ -31,12 +31,11 @@ class EventController extends Controller
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
             'deskripsi' => 'required',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarevent'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarevent'), $image_name);
+        } else {
             $image_name = null;
         }
 
@@ -51,6 +50,8 @@ class EventController extends Controller
             'slug' => Str::slug($request->judul, '-'),
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Menambahkan Event!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('events.index');
     }
 
@@ -77,12 +78,11 @@ class EventController extends Controller
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
             'deskripsi' => 'required',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarevent'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarevent'), $image_name);
+        } else {
             $image_name = null;
         }
 
@@ -95,6 +95,8 @@ class EventController extends Controller
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Mengedit Event!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('events.index');
     }
 
@@ -104,9 +106,11 @@ class EventController extends Controller
      * @param  int  $wisata
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(Request $request, Event $event)
     {
         $event->delete();
+        $request->session()->flash('flash.banner', 'Berhasil Menghapus Event!');
+        $request->session()->flash('flash.bannerStyle', 'danger');
         return redirect()->route('events.index')->with('status', 'Data Berhasil di hapus!');
     }
 }

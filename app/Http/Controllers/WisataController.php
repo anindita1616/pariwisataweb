@@ -34,12 +34,11 @@ class WisataController extends Controller
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarwisata'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarwisata'), $image_name);
+        } else {
             $image_name = null;
         }
         // $file_name = request()->gambar->getClientOriginalName();
@@ -54,6 +53,8 @@ class WisataController extends Controller
             'slug' => Str::slug($request->nama, '-'),
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Menambahkan Tempat Wisata');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('wisatas.index');
     }
 
@@ -82,12 +83,11 @@ class WisataController extends Controller
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarwisata'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarwisata'), $image_name);
+        } else {
             $image_name = null;
         }
         // $file_name = request()->gambar->getClientOriginalName();
@@ -101,13 +101,17 @@ class WisataController extends Controller
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Mengupdate Tempat Wisata!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('wisatas.index');
     }
 
     /* Hapus dari Database */
-    public function destroy(Wisata $wisata)
+    public function destroy(Request $request, Wisata $wisata)
     {
         $wisata->delete();
+        $request->session()->flash('flash.banner', 'Berhasil Menghapus Tempat Wisata!');
+        $request->session()->flash('flash.bannerStyle', 'danger');
         return redirect()->route('wisatas.index')->with('status', 'Data Berhasil di hapus!');
     }
 }

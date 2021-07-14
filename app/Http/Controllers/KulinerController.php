@@ -32,12 +32,11 @@ class KulinerController extends Controller
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
             'deskripsi' => 'required',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarkuliner'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarkuliner'), $image_name);
+        } else {
             $image_name = null;
         }
         // $file_name = request()->gambar->getClientOriginalName();
@@ -51,6 +50,8 @@ class KulinerController extends Controller
             'slug' => Str::slug($request->nama, '-'),
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Menambahkan Tempat Kuliner!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('kuliners.index');
     }
 
@@ -89,12 +90,11 @@ class KulinerController extends Controller
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
             'deskripsi' => 'required',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarkuliner'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarkuliner'), $image_name);
+        } else {
             $image_name = null;
         }
         // $file_name = request()->gambar->getClientOriginalName();
@@ -108,6 +108,8 @@ class KulinerController extends Controller
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Mengedit Tempat Kuliner!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('kuliners.index');
     }
 
@@ -117,9 +119,11 @@ class KulinerController extends Controller
      * @param  int  $wisata
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kuliner $kuliner)
+    public function destroy(Request $request, Kuliner $kuliner)
     {
         $kuliner->delete();
+        $request->session()->flash('flash.banner', 'Berhasil Menghapus Tempat Kuliner!');
+        $request->session()->flash('flash.bannerStyle', 'danger');
         return redirect()->route('kuliners.index')->with('status', 'Data Berhasil di hapus!');
     }
 }

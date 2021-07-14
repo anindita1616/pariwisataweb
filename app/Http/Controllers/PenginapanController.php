@@ -32,12 +32,11 @@ class PenginapanController extends Controller
             'deskripsi' => 'required',
             'link_order' => 'required',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarpenginapan'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarpenginapan'), $image_name);
+        } else {
             $image_name = null;
         }
         // $file_name = request()->gambar->getClientOriginalName();
@@ -51,6 +50,8 @@ class PenginapanController extends Controller
             'slug' => Str::slug($request->nama, '-'),
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Menambahkan Tempat Penginapan!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('penginapans.index');
     }
 
@@ -79,12 +80,11 @@ class PenginapanController extends Controller
             'deskripsi' => 'required',
             'link_order' => 'required',
         ]);
-        if (isset($request->gambar)){
+        if (isset($request->gambar)) {
             $extention = $request->gambar->extension();
-            $image_name = time().'.'.$extention;
-            $request->gambar->move(public_path('img/gambarpenginapan'),$image_name);
-
-        }else{
+            $image_name = time() . '.' . $extention;
+            $request->gambar->move(public_path('img/gambarpenginapan'), $image_name);
+        } else {
             $image_name = null;
         }
         // $file_name = request()->gambar->getClientOriginalName();
@@ -94,17 +94,21 @@ class PenginapanController extends Controller
             'nama' => request('nama'),
             'alamat' => request('alamat'),
             'link' => request('link'),
-            'link_order'=>request('link_order'),
+            'link_order' => request('link_order'),
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
         ]);
+        $request->session()->flash('flash.banner', 'Berhasil Menguodate Tempat Penginapan!');
+        $request->session()->flash('flash.bannerStyle', 'success');
         return redirect()->route('penginapans.index');
     }
 
     /* Hapus dari Database */
-    public function destroy(Penginapan $penginapan)
+    public function destroy(Request $request, Penginapan $penginapan)
     {
         $penginapan->delete();
+        $request->session()->flash('flash.banner', 'Berhasil Menghapus Tempat Penginapan!');
+        $request->session()->flash('flash.bannerStyle', 'danger');
         return redirect()->route('penginapans.index')->with('status', 'Data Berhasil di hapus!');
     }
 }
