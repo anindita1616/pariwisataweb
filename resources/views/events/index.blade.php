@@ -71,7 +71,7 @@
                                                 class="text-indigo-600 hover:text-indigo-800">View</a> <br>
                                             <a href="{{ route('events.edit', $event->slug) }}"
                                                 class="text-green-600 hover:text-green-800">Edit</a> <br>
-                                            <form action="{{ route('events.destroy', $event->id) }}" method="POST">
+                                            <form action="{{ route('events.destroy', $event) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="text-red-600 hover:text-red-800" type="submit"
