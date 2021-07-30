@@ -17,11 +17,10 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('lokasi');
-            $table->string('kategori');
+            $table->string('kategori')->nullable();
             $table->string('gambar')->nullable();
-            $table->dateTime('waktu')->nullable();
-            $table->text('deskripsi');
-            $table->string('slug');
+            $table->text('deskripsi')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
             $table->softDeletes();
         });

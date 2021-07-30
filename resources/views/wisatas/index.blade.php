@@ -60,7 +60,7 @@
                                             </div>
                                         </td>
                                         <td class=" w-1/3 px-2 py-4 text-md text-gray-500">
-                                            <iframe src="{{ $wisata->link }}" width="100%" height="100"
+                                            <iframe src="{{ $wisata->link_semat }}" width="100%" height="100"
                                                 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                             <br>
                                             <iframe width="100%" height="200"
@@ -69,9 +69,6 @@
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen></iframe>
                                         </td>
-                                        {{-- <td class="px-6 py-4 is-wrapped text-md text-gray-500">
-                                            {{ Str::of($wisata->harga)->words(30) }}
-                                        </td> --}}
                                         <td class="px-6 py-4 is-wrapped text-md text-gray-500">
                                             {{ Str::of($wisata->deskripsi)->words(30) }}
                                         </td>

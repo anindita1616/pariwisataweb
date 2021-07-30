@@ -46,16 +46,16 @@
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-1">
-                                        <label for="link" class="block text-sm font-medium text-gray-700">
+                                        <label for="link_lokasi" class="block text-sm font-medium text-gray-700">
                                             Link Lokasi
                                         </label>
                                         <div class="mt-1">
-                                            <input type="text" name="link" id="link"
+                                            <input type="text" name="link_lokasi" id="link_lokasi"
                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                                                placeholder="Link Lokasi">
+                                                placeholder="Link Lokasi Android">
                                         </div>
                                     </div>
-                                    <div class="col-span-3 sm:col-span-2">
+                                    <div class="col-span-3 sm:col-span-1">
                                         <label for="link_order" class="block text-sm font-medium text-gray-700">
                                             Link Order
                                         </label>
@@ -65,6 +65,15 @@
                                                 placeholder="Link Order">
                                         </div>
                                     </div>
+                                    <div class="col-span-3 sm:col-span-1">
+                                        <label for="link_semat" class="block text-sm font-medium text-gray-700">
+                                            Link Semat
+                                        </label>
+                                        <div class="mt-1">
+                                            <input type="text" name="link_semat" id="link_semat"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                placeholder="Link Semat Web">
+                                        </div>
                                     <div class="col-span-3 sm:col-span-2">
                                         <label for="alamat" class="block text-sm font-medium text-gray-700">
                                             Alamat

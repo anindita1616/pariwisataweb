@@ -18,10 +18,11 @@ class CreateWisatasTable extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('gambar')->nullable();
-            $table->text('link');
-            $table->string('harga');
-            $table->text('deskripsi');
-            $table->string('slug');
+            $table->text('link_lokasi')->nullable();
+            $table->text('link_semat')->nullable();
+            $table->string('harga')->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
             $table->softDeletes();
         });

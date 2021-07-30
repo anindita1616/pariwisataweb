@@ -31,16 +31,16 @@
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-1">
-                                        <label for="link" class="block text-sm font-medium text-gray-700">
+                                        <label for="link_lokasi" class="block text-sm font-medium text-gray-700">
                                             Link Lokasi
                                         </label>
                                         <div class="mt-1">
-                                            <input type="text" name="link" id="link_order"
+                                            <input type="text" name="link_lokasi" id="link_lokasi"
                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                                                value="{{ $penginapan->link }}">
+                                                value="{{ $penginapan->link_lokasi }}">
                                         </div>
                                     </div>
-                                    <div class="col-span-3 sm:col-span-2">
+                                    <div class="col-span-3 sm:col-span-1">
                                         <label for="link_order" class="block text-sm font-medium text-gray-700">
                                             Link Order
                                         </label>
@@ -48,6 +48,16 @@
                                             <input type="text" name="link_order" id="link_order"
                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                                                 value="{{ $penginapan->link_order }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3 sm:col-span-1">
+                                        <label for="link_semat" class="block text-sm font-medium text-gray-700">
+                                            Link Semat
+                                        </label>
+                                        <div class="mt-1">
+                                            <input type="text" name="link_semat" id="link_semat"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                value="{{ $penginapan->link_semat }}">
                                         </div>
                                     </div>
                                     <div class="col-span-3 sm:col-span-2">

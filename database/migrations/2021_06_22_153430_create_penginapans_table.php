@@ -18,11 +18,12 @@ class CreatePenginapansTable extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('gambar')->nullable();
-            $table->string('slug');
-            $table->text('link');
-            $table->text('link_order');
-            $table->string('harga');
-            $table->text('deskripsi');
+            $table->string('slug')->unique();
+            $table->text('link_lokasi')->nullable();
+            $table->text('link_semat')->nullable();
+            $table->text('link_order')->nullable();
+            $table->string('harga')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

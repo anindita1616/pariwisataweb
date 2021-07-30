@@ -56,7 +56,7 @@
                                             </div>
                                         </td>
                                         <td class=" w-1/3 px-2 py-4 text-md text-gray-500">
-                                            <iframe src="{{ $kuliner->link }}" width="100%" height="100"
+                                            <iframe src="{{ $kuliner->link_semat }}" width="100%" height="100"
                                                 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                             <br>
                                             <iframe width="100%" height="300"

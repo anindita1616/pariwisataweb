@@ -24,12 +24,6 @@
                                 <td> : </td>
                                 <td class="has-text-link">{{ $event->kategori }}</td>
                             </tr>
-                            <tr>
-                                <td>Waktu </td>
-                                <td> : </td>
-                                <td>30 Juli 2021 - 3 Agustus 2021</td>
-                            </tr>
-                        </table>
                         <div class="content">
                             <p class="title is-size-5">Informasi</p>
                             <p class="subtitle is-size-6 break-all">{!! $event->deskripsi !!}</p>

@@ -7,7 +7,7 @@
             <section id="dispar-all-detail" class="my-6">
                 <div class="columns is-centered is-multiline">
                     <div class="column is-7">
-                        <iframe src="{{ $kuliner->link }}" width="100%" height="300" style="border:0;"
+                        <iframe src="{{ $kuliner->link_semat }}" width="100%" height="300" style="border:0;"
                             allowfullscreen="" loading="lazy"></iframe>
                         <br>
                         <p class="is-size-3 has-text-weight-bold">{{ $kuliner->nama }}</p>
