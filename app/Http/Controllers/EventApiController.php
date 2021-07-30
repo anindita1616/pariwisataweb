@@ -9,10 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 class EventApiController extends Controller
 {
     /**
-     * Menampilkan Seluruh List Event
-     *
-     * @return \Illuminate\Http\Response
-     */
+     * Menampilkan Seluruh List Event */
     public function index()
     {
         $event = Event::simplePaginate(5)->all();
@@ -24,11 +21,7 @@ class EventApiController extends Controller
     }
 
     /**
-     * Menapilkan Event Secara Spesifik
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     * Menapilkan Event Secara Spesifik */
     public function show($slug)
     {
         $event = Event::where('slug', $slug)->first();

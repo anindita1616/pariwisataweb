@@ -8,10 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 class PenginapanApiController extends Controller
 {
     /**
-     * Menampilkan Seluruh List Penginapan
-     *
-     * @return \Illuminate\Http\Response
-     */
+     * Menampilkan Seluruh List Penginapan */
     public function index()
     {
         $penginapan = Penginapan::simplePaginate(5)->all();
@@ -23,11 +20,7 @@ class PenginapanApiController extends Controller
     }
 
     /**
-     * Menapilkan Penginapan Secara Spesifik
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     * Menapilkan Penginapan Secara Spesifik */
     public function show($slug)
     {
         $penginapan = Penginapan::where('slug', $slug)->first();

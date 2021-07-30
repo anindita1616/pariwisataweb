@@ -8,10 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 class KulinerApiController extends Controller
 {
     /**
-     * Menampilkan Seluruh List Kuliner
-     *
-     * @return \Illuminate\Http\Response
-     */
+     * Menampilkan Seluruh List Kuliner */
     public function index()
     {
         $kuliner = Kuliner::simplePaginate(5)->all();

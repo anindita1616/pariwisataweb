@@ -8,10 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 class WisataApiController extends Controller
 {
     /**
-     * Menampilkan Seluruh List Wisata
-     *
-     * @return \Illuminate\Http\Response
-     */
+     * Menampilkan Seluruh List Wisata */
     public function index()
     {
         $wisata = Wisata::simplePaginate(5)->all();
@@ -23,11 +20,7 @@ class WisataApiController extends Controller
     }
 
     /**
-     * Menapilkan Wisata Secara Spesifik
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     * Menapilkan Wisata Secara Spesifik */
     public function show($slug)
     {
         $wisata = Wisata::where('slug', $slug)->first();

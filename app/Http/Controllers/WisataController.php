@@ -29,7 +29,8 @@ class WisataController extends Controller
         request()->validate([
             'nama' => 'required',
             'alamat' => 'required',
-            'link' => 'required',
+            'link_lokasi' => 'required',
+            'link_semat' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
@@ -47,7 +48,8 @@ class WisataController extends Controller
         Wisata::create([
             'nama' => request('nama'),
             'alamat' => request('alamat'),
-            'link' => request('link'),
+            'link_lokasi' => request('link_lokasi'),
+            'link_semat' => request('link_semat'),
             'harga' => request('harga'),
             'gambar' => $image_name,
             'slug' => Str::slug($request->nama, '-'),
@@ -78,7 +80,8 @@ class WisataController extends Controller
         request()->validate([
             'nama' => 'required',
             'alamat' => 'required',
-            'link' => 'required',
+            'link_lokasi' => 'required',
+            'link_semat' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
@@ -96,7 +99,8 @@ class WisataController extends Controller
         $wisata->update([
             'nama' => request('nama'),
             'alamat' => request('alamat'),
-            'link' => request('link'),
+            'link_lokasi' => request('link'),
+            'link_semat' => request('link'),
             'harga' => request('harga'),
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),

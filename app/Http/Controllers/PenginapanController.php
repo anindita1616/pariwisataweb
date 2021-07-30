@@ -75,7 +75,8 @@ class PenginapanController extends Controller
         request()->validate([
             'nama' => 'required',
             'alamat' => 'required',
-            'link' => 'required',
+            'link_lokasi' => 'required',
+            'link_semat' => 'required',
             'gambar' => 'required:mimes:jpg,jpeg,png,gif',
             'deskripsi' => 'required',
             'link_order' => 'required',
@@ -93,7 +94,8 @@ class PenginapanController extends Controller
         $penginapan->update([
             'nama' => request('nama'),
             'alamat' => request('alamat'),
-            'link' => request('link'),
+            'link_lokasi' => request('link_lokasi'),
+            'link_semat' => request('link_semat'),
             'link_order' => request('link_order'),
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
