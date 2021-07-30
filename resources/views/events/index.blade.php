@@ -21,19 +21,15 @@
                             <thead class="bg-yellow-50">
                                 <tr>
                                     <th scope="col"
-                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase">
+                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Nama
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase">
+                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
                                         Kategori
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase break-all tracking-tight">
-                                        Lokasi
-                                    </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase break-all tracking-wider">
                                         Deskripsi
                                     </th>
                                     <th scope="col"
@@ -45,23 +41,19 @@
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($events as $event)
                                     <tr>
-                                        <td class="px-6 py-4 pre-wrap">
+                                        <td class="px-6 py-4">
                                             <div class="flex items-center">
-                                                <div class="flex-shrink-0 h-20 w-20">
-                                                    <img class="h-20 w-20 is-square"
-                                                        src="{{asset('img/gambarevent/'.$event->gambar)}}" alt="">
-                                                </div>
-                                                <div class="ml-4">
+                                                <div class="flex-shrink-0 h-60 w-80">
                                                     <div class="text-md font-medium text-gray-900">
                                                         {{ $event->judul }}
                                                     </div>
+                                                    <img class="h-52 w-100 is-square"
+                                                        src="{{asset('img/gambarevent/'.$event->gambar)}}" alt="">
                                                 </div>
+                                            </div>
                                         </td>
                                         <td class="px-6 py-4 text-md text-gray-500">
                                             {{ $event->kategori }}
-                                        </td>
-                                        <td class="w-1/4 px-6 py-4  text-md text-gray-500">
-                                            {{ $event->lokasi }}
                                         </td>
                                         <td class="px-6 py-4 break-words text-md text-gray-500">
                                             {{ Str::of($event->deskripsi)->words(50) }}
