@@ -99,8 +99,8 @@ class WisataController extends Controller
         $wisata->update([
             'nama' => request('nama'),
             'alamat' => request('alamat'),
-            'link_lokasi' => request('link'),
-            'link_semat' => request('link'),
+            'link_lokasi' => request('link_lokaso'),
+            'link_semat' => request('link_semat'),
             'harga' => request('harga'),
             'gambar' => $image_name,
             'deskripsi' => request('deskripsi'),
