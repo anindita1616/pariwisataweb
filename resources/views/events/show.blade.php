@@ -24,6 +24,7 @@
                                 <td> : </td>
                                 <td class="has-text-link">{{ $event->kategori }}</td>
                             </tr>
+                        </table>
                         <div class="content">
                             <p class="title is-size-5">Informasi</p>
                             <p class="subtitle is-size-6 break-all">{!! $event->deskripsi !!}</p>
