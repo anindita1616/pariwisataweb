@@ -11,7 +11,7 @@
 			</nav>
 			<div class="columns is-centered is-multiline container-event">
 				<div class="column is-3">
-					<img src="{{ asset('img/disporapar.jpg') }}">
+					<img src="{{ asset('img/logo.png') }}">
 				</div>
 				<div class="column is-6 pt-6">
 					<p class="title is-size-3">Dinas Pemuda, Olah Raga dan Pariwisata Kota Balikpapan</p>
